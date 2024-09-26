@@ -12662,10 +12662,274 @@ img {
   color: var(--green-color) !important;
 }
 
+.order_placed {
+  text-align: center;
+  padding: 30px 0;
+}
 
-.amount .supplier-card .badge-verified {
+.order_placed_card img {
+  height: 150px;
+  object-fit: cover;
+}
+
+.order_placed .deletebtn {
+  border: 1px solid #ddd;
+  margin: 0 20px;
+  padding: 5px 15px;
+  border-radius: 20px;
+}
+
+.thank_logo img {
+  height: 50px;
+  width: 100%;
+  object-fit: contain;
+}
+
+.thank_logo a {
+  color: var(--green-color);
+  font-weight: 600;
+}
+
+.order_details {
+  padding: 30px;
+}
+
+
+.btn-outline-success {
+  color: var(--green-color);
+  border-color: var(--green-color);
+  background-color: #19875414;
+}
+
+.btn-outline-success:hover {
+  color: #fff;
+  background-color: var(--green-color);
+  border-color: var(--green-color)
+}
+
+.btn-check:focus+.btn-outline-success,
+.btn-outline-success:focus {
+  box-shadow: 0 0 0 .25rem rgba(62, 181, 72, .5)
+}
+
+.btn-check:active+.btn-outline-success,
+.btn-check:checked+.btn-outline-success,
+.btn-outline-success.active,
+.btn-outline-success.dropdown-toggle.show,
+.btn-outline-success:active {
+  color: #fff;
+  background-color: var(--green-color);
+  border-color: var(--green-color)
+}
+
+.btn-check:active+.btn-outline-success:focus,
+.btn-check:checked+.btn-outline-success:focus,
+.btn-outline-success.active:focus,
+.btn-outline-success.dropdown-toggle.show:focus,
+.btn-outline-success:active:focus {
+  box-shadow: 0 0 0 .25rem rgba(62, 181, 72, .5)
+}
+
+.btn-outline-success.disabled,
+.btn-outline-success:disabled {
+  color: var(--green-color);
+  background-color: transparent
+}
+
+.order_review .person-img {
+  height: 50px;
+  width: 50px;
+}
+
+.order_review .person-img img {
+  object-fit: cover;
+}
+
+.review_submit {
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  border: 3px solid var(--green-color);
+  background-color: #3eb54826;
+  margin-bottom: 10px;
+}
+
+.review_submit p {
+  line-height: 18px;
+}
+
+
+.banner_source {
+  height: 200px;
+  background-image: url(/assets/img/banner/page-banner-1.jpg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.banner_source h4,
+.banner_source p {
+  color: #fff;
+}
+
+.header__search-box .search_section {
+  height: 200px;
+  background-color: #fff;
+  width: 100%;
+  position: absolute;
+  top: 52px;
+  left: 0;
+  right: 0;
+  display: none;
+}
+
+.header__search-box:hover .search_section {
+  display: block;
+}
+
+.back-detail {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+
+.account_section {
+  background-color: rgb(239, 239, 239);
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
+  margin: 50px 0;
+  padding: 20px;
+}
+
+
+.account_section .profile {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.account_section .avatar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #f6f6f6;
+  object-fit: cover;
+}
+
+.account_section .avatar {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 15px;
+}
+
+.account_section .username {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #555;
+}
+
+.account_section .logout {
+  color: var(--gold-color);
+  text-decoration: none;
+}
+
+.account_section nav ul {
+  list-style: none;
+}
+
+.account_section nav ul .nav-item {
+  margin-bottom: 10px;
+}
+
+.account_section nav ul .nav-item .nav-link {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  background-color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  border: 1px solid #fff;
+}
+
+.account_section nav ul .nav-item .nav-link.active,
+.account_section nav ul .nav-item .nav-link:hover {
+  /* background-color: var(--gold-color); */
+  /* color: white; */
+  background: rgba(164, 125, 45, 0.33);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.4px);
+  -webkit-backdrop-filter: blur(3.4px);
+  border: 1px solid rgba(164, 125, 45, 0.3);
+}
+
+.account_section .content {
+  padding: 10px 40px;
+  flex-grow: 1;
+}
+
+.account_section .content h2 {
+  font-size: 24px !important;
+  margin-bottom: 0px;
+}
+
+.account_section .content h2 span {
+  font-size: 15px;
+}
+
+.account_section .content h2 strong {
+  color: var(--gold-color);
+}
+
+.account_section .content a {
+  color: var(--gold-color);
+  text-decoration: none;
+}
+
+.account_section .content p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.account_section p,
+.account_section a {
+  font-size: 14px;
+}
+
+.address-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.address-card .actions {
+  margin-top: 0px;
+  font-size: 14px;
+}
+
+.address-card .actions a {
+  margin-right: 15px;
+  color: var(--green-color);
+  text-decoration: none;
+}
+
+.address-card .amazon-default {
+  color: var(--gold-color);
+  font-weight: bold;
+}
+
+.account-tab-header {
+  background: rgba(164, 125, 45, 0.34);
+  border: 1px solid rgba(164, 125, 45, 0.3);
+  padding: 15px;
+}
+
+
+.supplier-card .badge-verified {
   color: #fff;
   background-color: #0d6efd;
+  /* Bootstrap primary */
   border-radius: 5px;
   padding: 2px 5px;
   font-size: 0.8rem;
@@ -12709,7 +12973,41 @@ img {
   flex-wrap: wrap;
 }
 
+.amount .supplier-card .badge-verified {
+  color: #fff;
+  background-color: #0d6efd;
+  border-radius: 5px;
+  padding: 2px 5px;
+  font-size: 0.8rem;
+}
 
+.fotter-area.d-dark-bg {
+  border-top: 1px solid #393637;
+}
+
+.excel_file {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.excel_file input[type="file"] {
+  display: none;
+}
+
+.excel_file form {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.bs-button.bs2-button-next {
+  right: 0;
+}
+
+.bs-button.bs-button-next {
+  right: 0;
+}
 
 .account_section {
   background-color: rgb(239, 239, 239);
@@ -12872,4 +13170,50 @@ img {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.supplier_contact .amount input[type="number"] {
+  border-radius: 7px;
+  border: 1px solid #e8e8e8;
+  height: 37px;
+}
+
+.supplier_contact .Detailed textarea {
+  width: 100%;
+  border: 1px solid #e8e8e8;
+  padding: 5px 11px;
+}
+
+.supplier_contact .Detailed .attachment input[type=file] {
+  display: none;
+}
+
+.supplier_contact .Detailed .attachment label {
+  color: var(--dark-golden-color);
+  font-size: 15px;
+  margin: 20px 0 0;
+  cursor: pointer;
+}
+
+.supplier_contact .Detailed .file-name {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 14px;
+  color: var(--grey-color);
+}
+
+.supplier_contact .Detailed .buyer_question {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.supplier_contact .Detailed .buyer_question a {
+  font-size: 14px;
+  border-radius: 5px;
+  background-color: #e8e8e8;
+  padding: 5px 10px;
+}
+
+.supplier_contact .Detailed .buyer_question>div {
+  margin: 10px 10px 0px 0;
 }
