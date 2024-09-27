@@ -24555,7 +24555,7 @@ img {
 
   height: 400px;
 
-  object-fit: cover;
+  object-fit: contain;
 
 }
 
@@ -25996,6 +25996,8 @@ img {
   border-radius: 7px;
   border: 1px solid #e8e8e8;
   height: 37px;
+  padding-left: 10px;
+  width: 100px;
 }
 
 .supplier_contact .Detailed textarea {
