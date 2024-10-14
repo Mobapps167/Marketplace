@@ -25435,7 +25435,7 @@ img {
 
   border-color: var(--primary-color);
 
-  background-color: #19875414;
+  background-color: #a7843b29;
 
 }
 
@@ -25457,7 +25457,7 @@ img {
 
 .btn-outline-success:focus {
 
-  box-shadow: 0 0 0 0.25rem rgba(62, 181, 72, 0.5);
+  box-shadow: rgb(164 125 45 / 48%);
 
 }
 
@@ -25493,7 +25493,7 @@ img {
 
 .btn-outline-success:active:focus {
 
-  box-shadow: 0 0 0 0.25rem rgba(62, 181, 72, 0.5);
+  box-shadow: rgb(164 125 45 / 48%);
 
 }
 
@@ -26039,146 +26039,19 @@ img {
 
 /* vendor store page css */
 
-.oct_slider {
-  background: #fff;
-  height: 100vh;
-}
-
-.oct_slider [class^=swiper-button-] {
-  transition: all 0.3s ease;
-}
-
-.oct_slider .swiper-slide {
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
-
-.oct_slider .swiper-container {
-  width: 80%;
-  height: 100vh;
-  float: left;
-  transition: opacity 0.6s ease, transform 0.3s ease;
-}
-
-.oct_slider .swiper-container.nav-slider {
-  width: 20%;
-  padding-left: 5px;
-}
-
-.oct_slider .swiper-container.nav-slider .swiper-slide {
-  cursor: pointer;
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
-}
-
-.oct_slider .swiper-container.nav-slider .swiper-slide.swiper-slide-active {
-  opacity: 1;
-}
-
-.oct_slider .swiper-container.nav-slider .swiper-slide .content {
-  width: 100%;
-}
-
-.oct_slider .swiper-container.nav-slider .swiper-slide .content .title {
-  font-size: 20px;
-}
-
-.oct_slider .swiper-container:hover .swiper-button-prev,
-.oct_slider .swiper-container:hover .swiper-button-next {
-  transform: translateX(0);
-  opacity: 1;
-  visibility: visible;
-}
-
-.oct_slider .swiper-container.loading {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.oct_slider .swiper-slide {
-  overflow: hidden;
-}
-
-.oct_slider .swiper-slide .slide-bgimg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-position: center;
+/* .oct_slider {
+  background-image: url(../img/vendor-store/banner.jpg);
+  height: 300px;
+  background-repeat: no-repeat;
+  background-position: 50%;
   background-size: cover;
-}
-
-.oct_slider .swiper-slide .entity-img {
-  display: none;
-}
-
-.oct_slider .swiper-slide .content {
-  position: absolute;
-  top: 40%;
-  left: 0;
-  width: 50%;
-  padding-left: 5%;
-  color: #fff;
-}
-
-.oct_slider .swiper-slide .content .title {
-  font-size: 2.6em;
-  font-weight: bold;
-  margin-bottom: 30px;
-  color: #fff;
-}
-
-.oct_slider .swiper-slide .content .caption {
-  display: block;
-  font-size: 13px;
-  line-height: 1.4;
-  transform: translateX(50px);
-  opacity: 0;
-  transition: opacity 0.3s ease, transform 0.7s ease;
-}
-
-.oct_slider .swiper-slide .content .caption.show {
-  transform: translateX(0);
-  opacity: 1;
-}
-
-.oct_slider [class^=swiper-button-] {
-  width: 44px;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.oct_slider .swiper-button-prev {
-  transform: translateX(50px);
-}
-
-.oct_slider .swiper-button-next {
-  transform: translateX(-50px);
-}
-
-.oct_slider .swiper-button-next,
-.swiper-button-prev {
-  color: #fff;
-  border-radius: 50%;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s ease;
-}
-
-.oct_slider .swiper-button-next:after,
-.swiper-button-prev:after {
-  font-size: 24px;
-  font-weight: bold;
-}
+} */
 
 .store_feature {
   display: flex;
   align-items: center;
   justify-content: start;
-  padding: 10px;
+  padding: 10px 0 10px 20px;
   margin: 20px 0;
 }
 
@@ -26190,4 +26063,48 @@ img {
 
 .store_feature p {
   font-size: 13px;
+}
+
+/* 
+.item_vendor {
+  height: 250px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.item_vendor img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.item_vendor1:hover .fa-shopping-cart,
+.item_vendor1:hover p {
+  color: var(--dark-golden-color);
+}
+
+.item_vendor1 p {
+  font-weight: 600;
+} */
+
+.main_heading {
+  background: #efefef;
+  padding: 49px;
+}
+
+.main_heading .share {
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  background: #fff;
+  padding: 5px 10px;
+}
+
+.vendor_brand {
+  height: 100%;
+  border-right: 2px solid #ddd;
+}
+
+.vendor_brand ul li a:hover {
+  color: var(--dark-golden-color);
 }
