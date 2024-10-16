@@ -95,16 +95,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (liItem && megaMenu) {
       liItem.addEventListener('mouseover', function () {
-        // console.log(`Mouse over on item ${index + 1}`, megaMenu);
         megaMenu.classList.add('show-mega-menu');
       });
 
       liItem.addEventListener('mouseout', function () {
-        // console.log(`Mouse out on item ${index + 1}`, megaMenu);
         megaMenu.classList.remove('show-mega-menu');
       });
-    } else {
-      // console.log(`No mega menu found for item ${index + 1}`);
     }
   });
 });

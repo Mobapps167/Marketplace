@@ -369,6 +369,7 @@
 			autoplay: {
 				delay: 6000,
 			},
+			allowTouchMove: false, // Disable swipe interaction
 
 			// If we need pagination
 			pagination: {
@@ -415,6 +416,7 @@
 			autoplay: {
 				delay: 6000,
 			},
+			allowTouchMove: false, // Disable swipe interaction
 
 			// If we need pagination
 			pagination: {
@@ -461,6 +463,7 @@
 			autoplay: {
 				delay: 6000,
 			},
+			allowTouchMove: false, // Disable swipe interaction
 
 			// If we need pagination
 			pagination: {
@@ -505,6 +508,7 @@
 			autoplay: {
 				delay: 6000,
 			},
+			allowTouchMove: false, // Disable swipe interaction
 
 			// If we need pagination
 			pagination: {
@@ -548,6 +552,7 @@
 			autoplay: {
 				delay: 6000,
 			},
+			allowTouchMove: false, // Disable swipe interaction
 
 			// If we need pagination
 			pagination: {
@@ -592,6 +597,7 @@
 			autoplay: {
 				delay: 6000,
 			},
+			allowTouchMove: false, // Disable swipe interaction
 
 			// If we need pagination
 			pagination: {
@@ -720,7 +726,6 @@ $(document).ready(function () {
 	});
 
 	$(".count_dropdown dd ul li a").click(function () {
-		//console.log($(this).html())
 		var text = $(this).html();
 		$(".count_dropdown dt a span").html(text);
 		$(".count_dropdown dd ul").hide();
@@ -728,7 +733,6 @@ $(document).ready(function () {
 	});
 
 	function getSelectedValue(id) {
-		//console.log(id,$("#" + id).find("dt a span.value").html())
 		return $("#" + id).find("dt a span.value").html();
 	}
 
@@ -746,75 +750,121 @@ $(document).ready(function () {
 
 
 // Header dropdown search button 
-    $(document).ready(function () {
-      // Toggle dropdown menu on button click
-      $("#dropdownButton").click(function (event) {
-        $("#dropdownMenu").toggle();
-        event.stopPropagation(); // Prevents the click from propagating to the document
-      });
+$(document).ready(function () {
+	// Toggle dropdown menu on button click
+	$("#dropdownButton").click(function (event) {
+		$("#dropdownMenu").toggle();
+		event.stopPropagation(); // Prevents the click from propagating to the document
+	});
 
-      // Close dropdown menu when clicking outside
-      $(document).click(function (event) {
-        if (!$(event.target).closest('#dropdownButton, #dropdownMenu').length) {
-          $("#dropdownMenu").hide();
-        }
-      });
-    });
-    $(document).ready(function () {
-      const $uploadContainer = $('#upload-container');
-      const $uploadFiles = $('#upload-files');
-      const $filesListContainer = $('#files-list-container');
-      const $uploadText = $('#upload-text');
+	// Close dropdown menu when clicking outside
+	$(document).click(function (event) {
+		if (!$(event.target).closest('#dropdownButton, #dropdownMenu').length) {
+			$("#dropdownMenu").hide();
+		}
+	});
+});
+$(document).ready(function () {
+	const $uploadContainer = $('#upload-container');
+	const $uploadFiles = $('#upload-files');
+	const $filesListContainer = $('#files-list-container');
+	const $uploadText = $('#upload-text');
 
-      function handleFile(file) {
-        $filesListContainer.empty();
-        $uploadText.addClass('hidden');
+	function handleFile(file) {
+		$filesListContainer.empty();
+		$uploadText.addClass('hidden');
 
-        const reader = new FileReader();
-        reader.onload = function (e) {
-          const $imageContainer = $('<div class="form__image-container"></div>');
-          const $image = $('<img class="form__image" src="' + e.target.result + '" alt="Uploaded Image">');
-          $imageContainer.append($image);
-          $filesListContainer.append($imageContainer);
+		const reader = new FileReader();
+		reader.onload = function (e) {
+			const $imageContainer = $('<div class="form__image-container"></div>');
+			const $image = $('<img class="form__image" src="' + e.target.result + '" alt="Uploaded Image">');
+			$imageContainer.append($image);
+			$filesListContainer.append($imageContainer);
 
-          $imageContainer.on('click', function () {
-            $imageContainer.remove();
-            if ($filesListContainer.children().length === 0) {
-              $uploadText.removeClass('hidden');
-            }
-          });
-        };
-        reader.readAsDataURL(file);
-      }
+			$imageContainer.on('click', function () {
+				$imageContainer.remove();
+				if ($filesListContainer.children().length === 0) {
+					$uploadText.removeClass('hidden');
+				}
+			});
+		};
+		reader.readAsDataURL(file);
+	}
 
-      $uploadFiles.on('change', function (e) {
-        const file = e.target.files[0];
-        if (file) {
-          handleFile(file);
-          // Reset the file input so that the same file can be uploaded again
-          $uploadFiles.val('');
-        }
-      });
+	$uploadFiles.on('change', function (e) {
+		const file = e.target.files[0];
+		if (file) {
+			handleFile(file);
+			// Reset the file input so that the same file can be uploaded again
+			$uploadFiles.val('');
+		}
+	});
 
-      $uploadContainer.on('dragover', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        $uploadContainer.addClass('active');
-      });
+	$uploadContainer.on('dragover', function (e) {
+		e.preventDefault();
+		e.stopPropagation();
+		$uploadContainer.addClass('active');
+	});
 
-      $uploadContainer.on('dragleave', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        $uploadContainer.removeClass('active');
-      });
+	$uploadContainer.on('dragleave', function (e) {
+		e.preventDefault();
+		e.stopPropagation();
+		$uploadContainer.removeClass('active');
+	});
 
-      $uploadContainer.on('drop', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        $uploadContainer.removeClass('active');
-        const file = e.originalEvent.dataTransfer.files[0];
-        if (file) {
-          handleFile(file);
-        }
-      });
-    });
+	$uploadContainer.on('drop', function (e) {
+		e.preventDefault();
+		e.stopPropagation();
+		$uploadContainer.removeClass('active');
+		const file = e.originalEvent.dataTransfer.files[0];
+		if (file) {
+			handleFile(file);
+		}
+	});
+});
+
+
+
+if (jQuery(".cat-slider").length > 0) {
+	let testimonialTwo = new Swiper('.cat-slider', {
+		slidesPerView: 1,
+		spaceBetween: 0,
+		// direction: 'vertical',
+		loop: true,
+		observer: true,
+		observeParents: true,
+		autoplay: {
+			delay: 6000,
+		},
+		allowTouchMove: false, // Disable swipe interaction
+		// If we need pagination
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		},
+		// Navigation arrows
+		navigation: {
+			nextEl: '.bs-button-next',
+			prevEl: '.bs-button-prev',
+		},
+
+		// And if we need scrollbar
+		scrollbar: {
+			el: '.swiper-scrollbar',
+		},
+		breakpoints: {
+			550: {
+				slidesPerView: 2,
+			},
+			768: {
+				slidesPerView: 3,
+			},
+			1200: {
+				slidesPerView: 4,
+			},
+			1400: {
+				slidesPerView: 5,
+			}
+		}
+	});
+}

@@ -26045,27 +26045,8 @@ img {
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
-} */
-
-.store_feature {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  padding: 10px 0 10px 20px;
-  margin: 20px 0;
 }
 
-.store_feature img {
-  height: 40px;
-  width: 40px;
-  object-fit: contain;
-}
-
-.store_feature p {
-  font-size: 13px;
-}
-
-/* 
 .item_vendor {
   height: 250px;
   width: 100%;
@@ -26088,6 +26069,24 @@ img {
   font-weight: 600;
 } */
 
+.store_feature {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 10px 0 10px 20px;
+  margin: 20px 0;
+}
+
+.store_feature img {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+}
+
+.store_feature p {
+  font-size: 13px;
+}
+
 .main_heading {
   background: #efefef;
   padding: 49px;
@@ -26107,4 +26106,95 @@ img {
 
 .vendor_brand ul li a:hover {
   color: var(--dark-golden-color);
+}
+
+/* review page css  */
+
+.review_between p {
+  margin-bottom: 0;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+.total_review .dis {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 10px;
+}
+
+.total_review .dis span {
+  font-size: 11px;
+  font-weight: 500;
+  background-color: #dffae4;
+  color: #618571;
+  padding: 0px 10px;
+  border-radius: 20px;
+}
+
+.total_review .dis .fas.fa-star {
+  font-size: 13px;
+  color: var(--pure-gold-color);
+}
+
+.total_review .dis .grey {
+  color: #ddd !important;
+}
+
+.vertical-line {
+  height: 100%;
+  width: 1px;
+  background-color: #ddd;
+}
+
+.rating-bar .rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.rating-bar .rating span {
+  margin-right: 10px;
+  width: 25px;
+  /* Ensures star and number are aligned */
+}
+
+.rating-bar .bar {
+  height: 10px;
+  background-color: lightgray;
+  position: relative;
+  border-radius: 5px;
+  width: 120px;
+  /* Fixed width for the bar */
+}
+
+.rating-bar .bar-fill {
+  height: 100%;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.rating-bar .bar-fill.teal {
+  background-color: teal;
+}
+
+.rating-bar .bar-fill.violet {
+  background-color: violet;
+}
+
+.rating-bar .bar-fill.orange {
+  background-color: orange;
+}
+
+.rating-bar .bar-fill.skyblue {
+  background-color: skyblue;
+}
+
+.rating-bar .count {
+  margin-left: 10px;
+  /* Margin between bar and count */
+  font-weight: bold;
 }

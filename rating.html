@@ -1,0 +1,198 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>LECLA International</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/css/bootstrap.css">
+  <link rel="stylesheet" href="assets/css/meanmenu.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="assets/css/owl-carousel.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.css">
+  <link rel="stylesheet" href="assets/css/backtotop.css">
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
+  <link rel="stylesheet" href="assets/css/nice-select.css">
+  <link rel="stylesheet" href="assets/flaticon/flaticon.css">
+  <link rel="stylesheet" href="assets/css/font-awesome-pro.css">
+  <link rel="stylesheet" href="assets/css/default.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Remix Icon -->
+  <link href=" https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css " rel="stylesheet" />
+  <script src="assets/js/vendor/jquery.js"></script>
+</head>
+
+<body>
+
+  <!-- back to top start -->
+  <div class="progress-wrap">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+  </div>
+  <!-- back to top end -->
+
+
+  <!-- header-here -->
+
+  <main class="bg-white">
+    <section class="pt-50 pb-50">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-6">
+                <div>
+                  <h3 class="mb-0">Reviews</h3>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex justify-content-end align-items-center">
+                  <div class="review_between">
+                    <p>March 2023 - October 2024</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 mt-30">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-10">
+                    <div class="total_review">
+                      <h5>Total Reviews</h5>
+                      <div class="dis">
+                        <h2 class="mb-0">10.0k </h2><span>21% <i class="fas fa-chart-line"></i></span>
+                      </div>
+                      <p>Growth in reviewa on this year</p>
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="vertical-line"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-10">
+                    <div class="total_review">
+                      <h5>Average Rating</h5>
+                      <div class="dis">
+                        <h2 class="mb-0">4.0</h2>
+                        <div class="d-flex gap-1">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star grey"></i>
+                        </div>
+                      </div>
+                      <p>Avarage Rating on this year</p>
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="vertical-line"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div>
+                  <div class="rating-bar">
+                    <div class="rating">
+                      <span><i class="fas fa-star"></i> 5</span>
+                      <div class="bar">
+                        <div class="bar-fill teal" id="bar-5"></div>
+                      </div>
+                      <span class="count" id="count-5">2.0k</span>
+                    </div>
+                    <div class="rating">
+                      <span><i class="fas fa-star"></i> 4</span>
+                      <div class="bar">
+                        <div class="bar-fill violet" id="bar-4"></div>
+                      </div>
+                      <span class="count" id="count-4">1.0k</span>
+                    </div>
+                    <div class="rating">
+                      <span><i class="fas fa-star"></i> 3</span>
+                      <div class="bar">
+                        <div class="bar-fill orange" id="bar-3"></div>
+                      </div>
+                      <span class="count" id="count-3">500</span>
+                    </div>
+                    <div class="rating">
+                      <span><i class="fas fa-star"></i> 2</span>
+                      <div class="bar">
+                        <div class="bar-fill skyblue" id="bar-2"></div>
+                      </div>
+                      <span class="count" id="count-2">200</span>
+                    </div>
+                    <div class="rating">
+                      <span><i class="fas fa-star"></i> 1</span>
+                      <div class="bar">
+                        <div class="bar-fill orange" id="bar-1"></div>
+                      </div>
+                      <span class="count" id="count-1">0k</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    // Sample data for dynamic updates
+    const ratings = {
+      5: 2000,
+      4: 1500,
+      3: 500,
+      2: 200,
+      1: 0
+    };
+
+    const maxRating = Math.max(...Object.values(ratings)); // Find max rating for scaling
+
+    Object.keys(ratings).forEach(star => {
+      const barElement = document.getElementById(`bar-${star}`);
+      const countElement = document.getElementById(`count-${star}`);
+
+      // Calculate the width as a percentage of the maximum rating
+      const percentage = (ratings[star] / maxRating) * 100;
+
+      // Set the width of the bar dynamically
+      barElement.style.width = `${percentage}%`;
+
+      // Update the count text
+      countElement.textContent = `${ratings[star] > 0 ? ratings[star] / 1000 + 'k' : '0k'}`;
+    });
+  </script>
+  <!-- footer-here -->
+
+  <!-- JS here -->
+  <script src="assets/js/vendor/waypoints.js"></script>
+  <script src="assets/js/bootstrap-bundle.js"></script>
+  <script src="assets/js/meanmenu.js"></script>
+  <script src="assets/js/swiper-bundle.js"></script>
+  <script src="assets/js/tweenmax.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/magnific-popup.js"></script>
+  <script src="assets/js/parallax.js"></script>
+  <script src="assets/js/backtotop.js"></script>
+  <script src="assets/js/nice-select.js"></script>
+  <script src="assets/js/countdown.min.js"></script>
+  <script src="assets/js/counterup.js"></script>
+  <script src="assets/js/wow.js"></script>
+  <script src="assets/js/isotope-pkgd.js"></script>
+  <script src="assets/js/imagesloaded-pkgd.js"></script>
+  <script src="assets/js/ajax-form.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/custom.js"></script>
+</body>
+
+</html>
