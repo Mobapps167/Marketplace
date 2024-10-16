@@ -26195,6 +26195,33 @@ img {
 
 .rating-bar .count {
   margin-left: 10px;
-  /* Margin between bar and count */
   font-weight: bold;
+}
+
+.become_seller img {
+  height: 20px;
+  width: 20px;
+}
+
+.review_preson .fas.fa-star {
+  font-size: 13px;
+  color: var(--pure-gold-color);
+}
+
+
+.review_preson .grey {
+  color: #ddd !important;
+}
+
+.profile_review {
+  display: flex;
+}
+
+.profile_review img {
+  height: 75px;
+  width: 75px;
+  object-fit: contain;
+  margin: 0 15px 0 0;
+  border-radius: 10px;
+  overflow: hidden;
 }
