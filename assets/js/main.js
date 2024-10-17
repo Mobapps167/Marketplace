@@ -868,3 +868,49 @@ if (jQuery(".cat-slider").length > 0) {
 		}
 	});
 }
+
+
+if (jQuery(".offer1").length > 0) {
+	let testimonialTwo = new Swiper('.offer1', {
+		slidesPerView: 1,
+		spaceBetween: 0,
+		// direction: 'vertical',
+		loop: true,
+		observer: true,
+		observeParents: true,
+		autoplay: {
+			delay: 6000,
+		},
+		allowTouchMove: false, // Disable swipe interaction
+
+		// If we need pagination
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		},
+		// Navigation arrows
+		navigation: {
+			nextEl: '.bs-offer1-next',
+			prevEl: '.bs-offer1-prev',
+		},
+
+		// And if we need scrollbar
+		scrollbar: {
+			el: '.swiper-scrollbar',
+		},
+		breakpoints: {
+			550: {
+				slidesPerView: 2,
+			},
+			768: {
+				slidesPerView: 3,
+			},
+			1200: {
+				slidesPerView: 4,
+			},
+			1400: {
+				slidesPerView: 6,
+			}
+		}
+	});
+}
