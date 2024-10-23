@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>LECLA International</title>
-  <meta name="description" content="">
+  <meta name="description" content="LECLA International">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
   <link rel="stylesheet" href="assets/css/bootstrap.css">
@@ -40,6 +40,7 @@
 
   <!-- header-here -->
   <main class="bg-white">
+    <!-- Cancel Items Section -->
     <section class="pt-50 pb-50">
       <div class="container custom-conatiner">
         <div class="row justify-content-center">
@@ -50,32 +51,27 @@
                   <h4 class="mb-3">Cancel items</h4>
                   <div class="item_cencel">
                     <div class="Deselect">
-                      <a href="">Deselect all</a>
+                      <a href="#">Deselect all</a>
                     </div>
                     <div class="px-2">
                       <div class="items mt-2">
                         <div class="d-flex justify-content-start align-items-center gap-3">
-                          <div>
-                            <input type="checkbox" id="items1" name="items">
-                          </div>
-                          <div>
-                            <label for="items1">
-                              <div class="d-flex align-items-start gap-3">
-                                <div>
-                                  <img src="assets/img/product_details/mobile-cover.jpg" alt="">
-                                </div>
-                                <div>
-                                  <h6 class="mb-0">Zebronics Zeb-Buds 30 3.5mm Stereo Wired in Ear Earphone with </h6>
-                                  <small class="text-danger mb-0">158.00</small>
-                                  <p class="mb-0">Qty: 1</p>
-                                </div>
+                          <input type="checkbox" id="items1" name="items">
+                          <label for="items1">
+                            <div class="d-flex align-items-start gap-3">
+                              <img src="assets/img/product_details/mobile-cover.jpg" alt="mobile cover">
+                              <div>
+                                <h6 class="mb-0">Zebronics Zeb-Buds 30 3.5mm Stereo Wired in Ear Earphone with </h6>
+                                <small class="text-danger mb-0">158.00</small>
+                                <p class="mb-0">Qty: 1</p>
                               </div>
-                            </label>
-                          </div>
+                            </div>
+                          </label>
                         </div>
                       </div>
                     </div>
                   </div>
+                  <!-- Cancellation Reasons -->
                   <div class="reason_cencel">
                     <div class="accordion" id="accordionExample">
                       <div class="accordion-item">
@@ -138,19 +134,21 @@
                       </div>
                     </div>
                   </div>
+                  <!-- Refund Option -->
                   <div class="mt-4">
-                    <h6>How can we make it right ?</h6>
+                    <h5>How can we make it right ?</h5>
                     <div class="border rounded p-3">
-                      <div class="d-flex justify-content-start align-items-center gap-2">
-                        <input type="checkbox" id="refund">
+                      <div class="d-flex align-items-center gap-2">
+                        <input type="checkbox" id="refund" name="refund">
                         <label for="refund">Refund to original payment instrument ( within 3-5 business days of order
                           Cancellation )</label>
                       </div>
-
                     </div>
                   </div>
-                  <div class="my-3 text-center">
-                    <a href="" class="btn btn-sm btn-warning rounded-pill">Cancel Checked items</a>
+                  <!-- Buttons -->
+                  <div class="my-3 d-flex justify-content-between align-items-center">
+                    <a href="" class="text-warning"><small>Don't Cancel</small></a>
+                    <button type="submit" class="btn btn-sm btn-warning rounded-pill">Yes, Continue</button>
                   </div>
                 </div>
               </div>
