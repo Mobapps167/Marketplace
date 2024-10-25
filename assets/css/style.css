@@ -33,15 +33,10 @@ a {
 }
 
 h1,
-
 h2,
-
 h3,
-
 h4,
-
 h5,
-
 h6 {
   font-family: "Rubik", sans-serif;
   color: var(--grey-color);
@@ -13438,4 +13433,246 @@ label {
   display: flex;
   gap: 10px;
   align-items: center;
+}
+
+.vendor_profile .vendor_profile_img {
+  height: 300px;
+  width: 100%;
+  border: 2px solid var(--dark-golden-color);
+  border-right: 0px;
+}
+
+.vendor_profile .vendor_profile_img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.vendor_profile .vendor_profile_ctnt {
+  text-align: center;
+  border: 2px solid var(--dark-golden-color);
+  background-color: #fff;
+  height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vendor_profile .vendor_profile_ctnt span {
+  width: 100%;
+  height: 2px;
+  background-color: var(--dark-golden-color);
+  display: block;
+}
+
+.vendor_profile .vendor_profile_ctnt h2 {
+  color: var(--dark-golden-color);
+}
+
+.v_profile {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.vendor_logo {
+  border: 2px solid var(--dark-golden-color);
+  border-top: 0;
+  background-color: #fff;
+}
+
+.add_pro_btn {
+  border: 2px solid var(--dark-golden-color);
+  margin: 50px 0;
+  padding: 50px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 15px;
+  background-color: #fff;
+}
+
+.add_pro_btn a {
+  background-color: var(--dark-golden-color);
+  border-radius: 10px;
+  padding: 7px 15px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.banner_vender {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  margin-top: 30px;
+}
+
+.supplier_contact .profile {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.supplier_contact .product_img {
+  height: 50px;
+  width: 50px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+}
+
+
+.chatbox_section .collapsed {
+  width: 0px !important;
+  height: 0px !important;
+  overflow: hidden !important;
+}
+
+.chatbox_section .main-card {
+  background: white;
+  color: white;
+  width: 34%;
+  height: 83vh;
+  margin: 0px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  transition: all 0.5s;
+  box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 999;
+}
+
+#chatbot_toggle {
+  background-color: var(--dark-golden-color);
+  color: #fff;
+  padding: 5px 20px;
+  border-radius: 10px;
+}
+
+.chatbox_section .line {
+  height: 1px;
+  background-color: var(--dark-golden-color);
+  width: 100%;
+  opacity: 0.2;
+}
+
+.chatbox_section .main-title {
+  background-color: var(--dark-golden-color);
+  font-size: large;
+  font-weight: bold;
+  display: flex;
+  height: 48px;
+}
+
+.chatbox_section .main-title>span {
+  margin: auto auto auto 8px;
+}
+
+.chatbox_section .chat-area {
+  flex-grow: 1;
+  overflow: auto;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chatbox_section .input-message {
+  padding: 8px 48px 8px 16px;
+  flex-grow: 1;
+  border: none;
+}
+
+.chatbox_section .input-message:focus {
+  outline: none;
+}
+
+.chatbox_section .input-div {
+  height: 48px;
+  display: flex;
+}
+
+.chatbox_section .input-send {
+  background: transparent;
+  width: 48px;
+  height: 48px;
+  right: 0%;
+  border: none;
+  cursor: pointer;
+}
+
+.chatbox_section #close-btn svg {
+  fill: #fff;
+}
+
+.chatbox_section .input-send svg {
+  fill: var(--dark-golden-color);
+  margin: 11px 8px;
+}
+
+.chatbox_section .chat-message-div {
+  display: flex;
+}
+
+.chatbox_section .chat-message-sent {
+  background-color: white;
+  margin: 8px 16px 8px 64px;
+  padding: 8px 16px;
+  animation-name: fadeIn;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 100ms;
+  color: black;
+  border-radius: 8px 8px 2px 8px;
+  background-color: lavender;
+}
+
+.chatbox_section .chat-message-received {
+  background-color: white;
+  margin: 8px 64px 8px 16px;
+  padding: 8px 16px;
+  animation-name: fadeIn;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 100ms;
+  color: black;
+  border-radius: 8px 8px 8px 2px;
+  background-color: lavender;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.chatbox_section i {
+  color: var(--dark-golden-color);
 }
