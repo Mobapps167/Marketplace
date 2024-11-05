@@ -13676,3 +13676,41 @@ label {
 .chatbox_section i {
   color: var(--dark-golden-color);
 }
+
+.accept_IV input[type=file] {
+  display: none;
+}
+
+.accept_IV label {
+  border: 2px dashed #ced4da;
+  width: 200px;
+  height: 100px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: #ced4da;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.accept_IV .preview-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.accept_IV .preview-container img,
+.accept_IV .preview-container video {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 5px;
+}

@@ -9445,12 +9445,13 @@
   </header>
   <!-- header-end -->
 
+  <!-- main start -->
   <main>
     <section>
-      <div class="container custom-conatiner mt-50 mb-50">
+      <div class="container custom-conatiner mt-50 mb-50 ">
         <div class="row justify-content-center">
-          <div class="col-md-9">
-            <div class="order_review">
+          <div class="col-md-9 white_bg_p">
+            <div class="order_review p-3">
               <div class="border-bottom pb-10 mb-20">
                 <h3 class="mb-4">Create Review</h3>
                 <div class="row align-items-center">
@@ -9482,10 +9483,17 @@
                 <h5>Add a headline</h5>
                 <input type="text" placeholder="What's most important to know? " class="form-control">
               </div>
-              <div class="border-bottom pb-20 mb-20">
+              <div class="border-bottom pb-20 mb-20 accept_IV">
                 <h5>Add a photo or video</h5>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, obcaecati. </p>
-                <input type="file">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, obcaecati.</p>
+                <input type="file" id="accept_IV" accept="image/*,video/*">
+                <label for="accept_IV">
+                  <i class="fas fa-plus"></i>
+                  <div class="preview-container"></div>
+                </label>
+                <div class="pt-3">
+                  <input type="text" class="form-control">
+                </div>
               </div>
               <div class="border-bottom pb-20 mb-20">
                 <h5>Add a written review</h5>
@@ -9509,7 +9517,7 @@
               </div>
               <p>We will notify you via email as soon as your review is processed .</p>
             </div>
-            <div>
+            <div class="px-3 pb-3">
               <button type="submit" class="btn btn-warning">Submit</button>
             </div>
           </div>
@@ -9578,6 +9586,7 @@
     </section>
     <!-- cta-area-end -->
   </main>
+  <!-- main end -->
 
   <!-- footer-start -->
   <footer>
@@ -9747,6 +9756,45 @@
     </div>
   </footer>
   <!-- footer-end -->
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const fileInput = document.getElementById('accept_IV');
+
+      fileInput.addEventListener('change', function () {
+        const files = this.files;
+        const previewContainer = this.nextElementSibling.querySelector('.preview-container');
+        previewContainer.innerHTML = '';
+
+        Array.from(files).forEach(file => {
+          const fileURL = URL.createObjectURL(file);
+          const isImage = file.type.startsWith('image/');
+          const isVideo = file.type.startsWith('video/');
+
+          if (isImage) {
+            const img = document.createElement('img');
+            img.src = fileURL;
+            previewContainer.appendChild(img);
+          } else if (isVideo) {
+            const video = document.createElement('video');
+            video.controls = true;
+            video.src = fileURL;
+            previewContainer.appendChild(video);
+          }
+        });
+      });
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const fileInput = document.getElementById('accept_IV');
+
+      fileInput.addEventListener('change', function () {
+        const files = this.files;
+      })
+    })
+  </script>
 
   <!-- JS here -->
   <script src="assets/js/vendor/waypoints.js"></script>
