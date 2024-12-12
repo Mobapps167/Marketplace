@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Earn with Lecla - Become a Reseller</title>
+  <style>
+    /* styles.css */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f7fa;
+      color: #333;
+    }
+
+    .reseller-container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .reseller-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .reseller-header h1 {
+      font-size: 2.5rem;
+      color: #007bff;
+    }
+
+    .reseller-header p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    .reseller-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .step {
+      text-align: center;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      background: #fafafa;
+    }
+
+    .step:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .step img {
+      width: 100%;
+      max-height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .step h2 {
+      font-size: 1.5rem;
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+
+    .step p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .reseller-btn {
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto 30px;
+      padding: 15px;
+      font-size: 1.2rem;
+      color: #fff;
+      background: #007bff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .reseller-btn:hover {
+      background: #0056b3;
+    }
+
+    .reseller-footer {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+    }
+
+    .why-join,
+    .subscription-plans {
+      margin-bottom: 20px;
+    }
+
+    .why-join ul {
+      list-style: disc;
+      margin: 10px 0 0 20px;
+      font-size: 1rem;
+    }
+
+    .subscription-plans .plans {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .plan {
+      text-align: center;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #fafafa;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .plan:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<body>
+  <section class="reseller-container">
+    <header class="reseller-header">
+      <h1>Earn with Lecla</h1>
+      <p>Your journey to financial freedom begins here. Become a reseller and unlock unlimited earning potential!</p>
+    </header>
+
+    <div class="reseller-steps">
+      <div class="step">
+        <img src="images/join-fee.jpg" alt="Join Fee">
+        <h2>1. Pay the Joining Fee</h2>
+        <p>Start your reseller journey with a minimal fee of just <strong>$5</strong>.</p>
+      </div>
+      <div class="step">
+        <img src="images/subscription-plan.jpg" alt="Subscription Plan">
+        <h2>2. Subscribe to a Plan</h2>
+        <p>Choose a subscription plan that fits your needs and goals. Flexible plans designed to help you grow.</p>
+      </div>
+      <div class="step">
+        <img src="images/become-reseller.jpg" alt="Become Reseller">
+        <h2>3. Click ‘Become a Reseller’</h2>
+        <p>Once subscribed, click the <strong>‘Become a Reseller’</strong> button to kickstart your earning journey.</p>
+      </div>
+    </div>
+
+    <button class="reseller-btn" onclick="handleResellerJoin()">Become a Reseller</button>
+
+    <footer class="reseller-footer">
+      <div class="why-join">
+        <h3>Why Join Lecla?</h3>
+        <p>Lecla provides an easy and rewarding way to start earning. Here's why you should join:</p>
+        <ul>
+          <li>Low investment, high rewards</li>
+          <li>Access to exclusive resources and tools</li>
+          <li>Flexible work hours - earn anytime, anywhere</li>
+          <li>Partner with a trusted, global brand</li>
+        </ul>
+      </div>
+
+      <div class="subscription-plans">
+        <h3>Subscription Plans</h3>
+        <div class="plans">
+          <div class="plan">
+            <h4>Starter Plan</h4>
+            <p>Perfect for beginners looking to make their first sales.</p>
+          </div>
+          <div class="plan">
+            <h4>Pro Plan</h4>
+            <p>Ideal for those aiming to scale their reseller business.</p>
+          </div>
+          <div class="plan">
+            <h4>Premium Plan</h4>
+            <p>For ambitious individuals ready to take their business to new heights.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <script>
+
+    // script.js
+    function handleResellerJoin() {
+      alert("Thank you for your interest! Redirecting to the registration page...");
+      window.location.href = "register.html"; // Replace with the actual URL
+    }
+
+  </script>
+</body>
+
+</html>
